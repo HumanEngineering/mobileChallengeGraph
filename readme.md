@@ -1,34 +1,42 @@
-# Mobile Frontend Technical Task (graph)
-
-Task Title: Hourly Weather Data Visualization Mobile App
+# Dev Challenge (Frontend Mobile) - Graph
 
 ## Task Description:
 
-Develop a frontend mobile app that fetches hourly temperature data for Helsinki from the OpenWeatherMap API, visualizes the data into a graph, and allows users to change the timespan of the graph, which subsequently updates the displayed data. The app should be built using React Native and run on mobile devices. Start by forking the provided GitHub repository (veri/mobile-frontend-task) and make a pull request with your changes upon completion.
+Develop a frontend mobile app that fetches temperature data for Helsinki from the OpenWeatherMap API, visualizes the data into a graph, and allows users to change the timespan of the graphs displayed data in one day increments. The app should be built using React Native.
 
-Don’t spend more than 4 hours on the task. If everything cannot be done in time prioritise instead what feels most important to you.
+Don’t spend more than 4 hours on the task. If everything cannot be done in time prioritise instead what feels most important to you. Tracking what you spent the time on is not necessary and you don't need to complete the task in one go.
 
-## Instructions:
+Remember you can always reach out if you have any questions!
 
-1. Fork the boilerplate React Native project from the veri/mobile-frontend-task repository
-2. Obtain an API key for the OpenWeatherMap API and use the hourly weather forecast endpoint to fetch hourly temperature data for Helsinki. [https://openweathermap.org/api/hourly-forecast](https://openweathermap.org/api/hourly-forecast)
-3. Visualise the fetched temperature data as a chart
-4. Implement a feature that allows users to change the day of the graph (e.g., today, yesterday, the day before and so on.) and update the displayed data accordingly. Note that free weather API key only allows going 4 days backwards.
+## Recommended features of the app
 
-## Bonus Points:
+- Fetching weather data of Helsinki from the free OpenWeatherMap API [https://openweathermap.org/forecast5](https://openweathermap.org/forecast5)
+- Visualizing the temperature as a chart one day at a time
+- Changing which days data is displayed
 
-1. Animate graph transitions when the timespan is changed.
-2. Write unit tests to ensure the app's functionality is working as intended.
+## Tips and hints
 
-## Deliverables:
+- You need to register to openweathermap.org to get a free API key. Their API key may take a few hours to become active.
+- You can only go 5 days backwards with the OpenWeatherMap forecast5 endpoint.
+- Feel free to use any libraries that make most sense to you or nothing at all. For example, we have left the possible chart library choice open on purpose.
+- Make sure to showcase your strengths
 
-1. A pull request to the veri/mobile-frontend-task GitHub repository containing the source code and a README file with instructions on how to set up, run, and test the mobile app.
-2. A brief demo video or a set of screenshots showcasing the app's functionality.
+## What we'll be looking for
 
-## Evaluation Criteria:
+- Clean and reasonable choices/decisions and the ability to argument about them.
+- Ability to prioritize and recognize what is valuable - focus on those aspects of this task where you can showcase your skills.
 
-1. Code quality and organisation (clean, modular, and well-documented).
-2. Functionality and user experience (smooth transitions, clear visualizations, and intuitive user interactions).
-3. Adherence to the given requirements and bonus points (if applicable).
-4. Proper use of the boilerplate project (ESLint, Prettier, etc.).
-5. Compatibility with mobile devices (iOS and Android).
+## When you're done:
+
+Respond to your contact with a zip file of the project.
+
+The email should contain:
+- A brief demo video or a set of screenshots showcasing the app's functionality.
+- Brief text description.
+- Make sure to highlight anything particularly interesting or cool in your solution!
+- The entire project itself in a zip file
+- Please **don't** include the following folders in the zip file to keep it's size down:
+    - node_modules
+    - ios/build
+    - ios/Pods
+    - android/.gradle
