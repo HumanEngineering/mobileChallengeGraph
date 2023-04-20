@@ -2,9 +2,9 @@
 
 ## Task Description:
 
-Develop a frontend mobile app that fetches temperature data for Helsinki from the OpenWeatherMap API, visualizes the data into a graph, and allows users to change the timespan of the graphs displayed data in one day increments. The app should be built using React Native.
+Develop a frontend mobile app that fetches temperature data for Helsinki from the OpenWeatherMap API, visualizes the data into a graph and allows the user to change which days temperature the graph shows. The app should be built using React Native.
 
-Don’t spend more than 4 hours on the task. If everything cannot be done in time prioritise instead what feels most important to you. Tracking what you spent the time on is not necessary and you don't need to complete the task in one go.
+Don’t spend more than 4 hours on the task. If everything cannot be done in time prioritize instead what feels most important to you. Tracking what you spent the time on is not necessary.
 
 Remember you can always reach out if you have any questions!
 
@@ -19,7 +19,6 @@ Remember you can always reach out if you have any questions!
 - You need to register to openweathermap.org to get a free API key. Their API key may take a few hours to become active.
 - You can only go 5 days backwards with the OpenWeatherMap forecast5 endpoint.
 - Feel free to use any libraries that make most sense to you or nothing at all. For example, we have left the possible chart library choice open on purpose.
-- Make sure to showcase your strengths
 
 ## What we'll be looking for
 
@@ -36,7 +35,8 @@ The email should contain:
 - Make sure to highlight anything particularly interesting or cool in your solution!
 - The entire project itself in a zip file
 - Please **don't** include the following folders in the zip file to keep it's size down:
-    - node_modules
-    - ios/build
-    - ios/Pods
-    - android/.gradle
+    - node_modules/
+    - ios/build/
+    - ios/Pods/
+    - android/.gradle/
+    - vendor/
