@@ -11,8 +11,14 @@ module.exports = {
      * */
     createDefaultProgram: true,
   },
-  plugins: ["@veri.co/eslint-plugin-veri", "prettier"],
+  plugins: [
+    "prettier",
+    "@typescript-eslint",
+    "@veri.co/eslint-plugin-veri",
+    "prettier",
+  ],
   extends: [
+    "@react-native-community",
     "plugin:@veri.co/eslint-plugin-veri/node",
     "plugin:@veri.co/eslint-plugin-veri/react",
     "plugin:@veri.co/eslint-plugin-veri/react_native",
@@ -22,5 +28,6 @@ module.exports = {
   },
   rules: {
     "@veri.co/veri/ban-font-weight-literals": "off",
+    // "prettier/prettier": "error",
   },
 };
