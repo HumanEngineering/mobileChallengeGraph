@@ -23,3 +23,13 @@ export type HourlyData = {
 export type HourlyUnits = {
   temperature_2m: string;
 };
+
+export type City = {
+  name: string;
+  coordinates: Coordinates;
+};
+
+export type Coordinates = {
+  latitude: number;
+  longitude: number;
+};

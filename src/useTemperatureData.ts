@@ -1,23 +1,23 @@
 import { useEffect, useState } from "react";
 import AsyncStorage from "@react-native-async-storage/async-storage";
 
-import { WeatherDataResponse, WeatherDataSuccess } from "../types";
+import { Coordinates, WeatherDataResponse, WeatherDataSuccess } from "../types";
 
-const LOCATION_COORD_HELSINKI = { lat: 60.1699, lon: 24.9384 };
+const BASE_URL = `https://api.open-meteo.com/v1/forecast?hourly=temperature_2m&forecast_days=1`;
 
-const BASE_URL = `https://archive-api.open-meteo.com/v1/archive?latitude=${LOCATION_COORD_HELSINKI.lat}&longitude=${LOCATION_COORD_HELSINKI.lon}&hourly=temperature_2m`;
-
-export const useTemperatureData = (dateString: string) => {
+export const useTemperatureData = (coordinates: Coordinates) => {
   const [data, setData] = useState<WeatherDataSuccess | undefined>();
   const [status, setStatus] = useState<"loading" | "error" | "success">(
     "loading"
   );
 
+  const key = `${coordinates.latitude}-${coordinates.longitude}`;
+
   useEffect(() => {
     const run = async () => {
       setStatus("loading");
 
-      const cachedData = await AsyncStorage.getItem(dateString);
+      const cachedData = await AsyncStorage.getItem(key);
 
       if (cachedData) {
         setData(JSON.parse(cachedData));
@@ -26,7 +26,7 @@ export const useTemperatureData = (dateString: string) => {
 
       try {
         const url =
-          `${BASE_URL}&start_date=${dateString}&end_date=${dateString}`.trim();
+          `${BASE_URL}&latitude=${coordinates.latitude}&longitude=${coordinates.longitude}`.trim();
 
         const res = await fetch(url, {
           method: "GET",
@@ -46,7 +46,7 @@ export const useTemperatureData = (dateString: string) => {
           throw json;
         }
 
-        await AsyncStorage.setItem(dateString, JSON.stringify(json));
+        await AsyncStorage.setItem(key, JSON.stringify(json));
         setData(json as WeatherDataSuccess);
         setStatus("success");
         // eslint-disable-next-line @typescript-eslint/no-explicit-any
@@ -62,7 +62,7 @@ export const useTemperatureData = (dateString: string) => {
       }
     };
     run();
-  }, [dateString]);
+  }, [coordinates.latitude, coordinates.longitude, key]);
 
   return { data, status };
 };

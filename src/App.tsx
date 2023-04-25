@@ -12,7 +12,11 @@ import {
 import { Colors } from "react-native/Libraries/NewAppScreen";
 import DatePicker from "react-native-date-picker";
 
+import { City } from "../types";
 import { ChartItem } from "./ChartItem";
+import CityCoordinates from "./cityCoordinates.json";
+
+const cityCoordinates: City[] = CityCoordinates;
 
 // 4 --> 04
 const addZeroIfNeeded = (n: number) => {
@@ -120,9 +124,9 @@ const App = () => {
           inverted
           horizontal
           snapToInterval={width}
-          data={availableDays}
-          keyExtractor={item => item}
-          renderItem={({ item }) => <ChartItem date={item} />}
+          data={cityCoordinates}
+          keyExtractor={item => item.name}
+          renderItem={({ item }) => <ChartItem city={item} />}
         />
       </View>
     </SafeAreaView>

@@ -15,16 +15,16 @@ import {
 import { useTemperatureData } from "./useTemperatureData";
 
 type Props = {
-  date: string;
+  city: City;
 };
 
-export const ChartItem = ({ date }: Props) => {
-  const { data, status } = useTemperatureData(date);
+export const ChartItem = ({ city }: Props) => {
+  const { data, status } = useTemperatureData(city.coordinates);
   const { width } = useWindowDimensions();
 
   return (
     <View style={{ width }}>
-      <Text style={s.text}>{date}</Text>
+      <Text style={s.text}>{city.name}</Text>
       {status === "error" && <Text>Something went wrong</Text>}
       {status === "loading" && <ActivityIndicator size="large" />}
       {status === "success" && (
@@ -53,6 +53,8 @@ export const ChartItem = ({ date }: Props) => {
 };
 
 import { StyleSheet } from "react-native";
+
+import { City } from "../types";
 
 const s = StyleSheet.create({
   text: {
