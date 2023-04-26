@@ -22,10 +22,10 @@ The app could look something like this, but feel free to take creative liberty:
 
 ## Specification
 
-- The app should be developed using React Native. **You should use our Expo boilerplate project which should have been sent to you as attachment to the email.**
+- The app should be developed using React Native. **You can find the boilerplate project on Github at:** [https://github.com/HumanEngineering/mobileChallengeGraph](https://github.com/HumanEngineering/mobileChallengeGraph)
 - The app should use [Open Meteo](https://open-meteo.com/) weather API to fetch today's hourly temperature data for each city.
     - See the endpoint: [https://open-meteo.com/en/docs#hourly=temperature_2m](https://open-meteo.com/en/docs#hourly=temperature_2m)
-- In the boilerplate project, there is a file called `src/cityCoordinates.json`**.** It contains all the cities for which you need to fetch and display today's temperature data.
+- In the boilerplate project, there is a file called `src/cityCoordinates.json`. It contains all the cities for which you need to fetch and display today's temperature data.
 - The user should be able to scroll or swipe horizontally to switch the city. The swiping or scrolling interaction should feel responsive and smooth.
 - The app should have partial offline support. If a user looked ever at the temperature of a specific city, they should be able to see that temperature also later, after an app restart, possibly without internet connection.
 
@@ -45,4 +45,4 @@ The app could look something like this, but feel free to take creative liberty:
 - The GitHub project or a zip should contain
     - A brief demo video and/or a set of screenshots showcasing the app's functionality.
     - Make sure to highlight particularly interesting features of your solution!
-- When you are sending us the zipped project, please **don't** include installed `node_modules` folder or any other files listed in `.gitignore`.
+- If you send us the project as zip, please **don't** include installed `node_modules` folder or any other files listed in `.gitignore`.
