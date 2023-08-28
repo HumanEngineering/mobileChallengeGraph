@@ -27,7 +27,6 @@ The app could look something like this, but feel free to take creative liberty:
     - See the endpoint: [https://open-meteo.com/en/docs#hourly=temperature_2m](https://open-meteo.com/en/docs#hourly=temperature_2m)
 - In the boilerplate project, there is a file called `src/cityCoordinates.json`. It contains all the cities for which you need to fetch and display today's temperature data.
 - The user should be able to scroll or swipe horizontally to switch the city. The swiping or scrolling interaction should feel responsive and smooth.
-- The app should have partial offline support. If a user looked ever at the temperature of a specific city, they should be able to see that temperature also later, after an app restart, possibly without internet connection.
 
 ## **Tips and hints**
 
